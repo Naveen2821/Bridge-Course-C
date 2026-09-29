@@ -1,27 +1,29 @@
-// Odd or even tally
-
+// Odd or even tally and sum of even and odd numbers    
 #include <stdio.h>
 int main()
 {
-    int num, odd = 0, even = 0, i;
-    int n;
-    printf("How many numbers do you want to enter? ");
+    int n, i, odd_count = 0, even_count = 0, odd_sum = 0, even_sum = 0;
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
+    int arr[n];
     printf("Enter %d numbers:\n", n);
-    for (i = 1; i <= n; i++)
+    for (i = 0; i < n; i++)
     {
-        scanf("%d", &num);
-
-        if (num % 2 == 0)
+        scanf("%d", &arr[i]);
+        if (arr[i] % 2 == 0)
         {
-            even++;
+            even_count++;
+            even_sum += arr[i];
         }
         else
         {
-            odd++;
+            odd_count++;
+            odd_sum += arr[i];
         }
     }
-    printf("Odd numbers: %d\n", odd);
-    printf("Even numbers: %d\n", even);
+    printf("Count of even numbers: %d\n", even_count);
+    printf("Sum of even numbers: %d\n", even_sum);
+    printf("Count of odd numbers: %d\n", odd_count);
+    printf("Sum of odd numbers: %d\n", odd_sum);
     return 0;
 }
