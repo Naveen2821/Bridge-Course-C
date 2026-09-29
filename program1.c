@@ -1,14 +1,22 @@
-#include<stdio.h>
-#include<stdlib.h> // C program to calculate area of rectangle
+#include <stdio.h>
+#include <stdlib.h>
+
+// C program to calculate perimeter and area of rectangle
+
 int main()
 {
-    float lenght,breadth,area;
+    float length, breadth, area;
+
     printf("Enter the length of the rectangle: \n");
-    scanf("%f", &lenght);
+    scanf("%f", &length);
+
     printf("Enter the breadth of the rectangle: \n");
     scanf("%f", &breadth);
-    area = lenght * breadth;
-    printf("The area of the rectangle is: %.2f", area);
-    return 0;
 
+    area = length * breadth;
+
+    printf("The perimeter of the rectangle is: %.2f\n", 2 * (length + breadth));
+    printf("The area of the rectangle is: %.2f\n", area);
+
+    return 0;
 }
