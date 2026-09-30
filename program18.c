@@ -1,18 +1,31 @@
-//right aligned NO.'s triangle
+// Center aligned number palindrome triangle
 
 #include <stdio.h>
-int main() {
+
+int main()
+{
     int n;
+
     printf("Enter the number of rows: ");
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++) {
-        
-        for (int j = 1; j <= n - i; j++) {
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
             printf(" ");
         }
-        for (int k = 1; k <= i; k++) {
-            printf("%d",k);
+
+        for (int k = 1; k <= i; k++)
+        {
+            printf("%d", k);
         }
+
+        for (int k = i - 1; k >= 1; k--)
+        {
+            printf("%d", k);
+        }
+
         printf("\n");
     }
     return 0;
